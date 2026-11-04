@@ -1,6 +1,5 @@
 import React from "react";
 import GuessInput from "../GuessInput";
-import GuessList from "../GuessList";
 import GameGrid from "../GameGrid";
 
 import { sample } from "../../utils";
@@ -27,7 +26,6 @@ function Game() {
 
   return (
     <>
-      {/* <GuessList guesses={guesses}></GuessList>*/}
       <GameGrid guesses={guesses}></GameGrid>
       <GuessInput handleGuess={handleGuess}></GuessInput>
     </>
