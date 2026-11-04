@@ -5,10 +5,11 @@ import { range } from "../../utils.js";
 
 function GuessRow({ guess, answer }) {
   let cells = range(5).map((_) => ({ letter: "" }));
+
   if (guess) {
-    console.log(guess);
     cells = checkGuess(guess, answer);
   }
+
   return (
     <p className="guess">
       {cells.map(({ letter, status }, index) => (
