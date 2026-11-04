@@ -15,13 +15,7 @@ function Game() {
 
   function handleGuess(guess) {
     console.info({ guess });
-    setGuesses([
-      ...guesses,
-      {
-        id: Date.now() + Math.random(),
-        guess,
-      },
-    ]);
+    setGuesses([...guesses, guess]);
   }
 
   return (
