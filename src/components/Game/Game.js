@@ -17,12 +17,13 @@ function Game() {
   const [gameState, setGameState] = React.useState("ongoing");
 
   function handleGuess(guess) {
-    setGuesses([...guesses, guess]);
+    const nextGuesses = [...guesses, guess];
+    setGuesses(nextGuesses);
 
     console.log({ answer, guess });
     if (answer === guess) {
       setGameState("won");
-    } else if (guesses.length >= NUM_OF_GUESSES_ALLOWED - 1) {
+    } else if (nextGuesses.length >= NUM_OF_GUESSES_ALLOWED) {
       setGameState("lost");
     }
   }
