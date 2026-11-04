@@ -5,7 +5,7 @@ import { range } from "../../utils.js";
 import { NUM_OF_GUESSES_ALLOWED } from "../../constants.js";
 
 function GameGrid({ guesses }) {
-  const guessesHolder = range(6).map(
+  const guessesHolder = range(NUM_OF_GUESSES_ALLOWED).map(
     (_, index) => guesses[index] || { id: index, guess: "     " }
   );
 
