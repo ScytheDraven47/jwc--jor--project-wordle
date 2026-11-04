@@ -1,0 +1,21 @@
+import React from "react";
+import GuessRow from "../GuessRow";
+
+import { range } from "../../utils.js";
+import { NUM_OF_GUESSES_ALLOWED } from "../../constants.js";
+
+function GameGrid({ guesses }) {
+  const guessesHolder = range(6).map(
+    (_, index) => guesses[index] || { id: index, guess: "     " }
+  );
+
+  return (
+    <div className="guess-results">
+      {guessesHolder.map(({ guess, id }) => (
+        <GuessRow key={id} guess={guess}></GuessRow>
+      ))}
+    </div>
+  );
+}
+
+export default GameGrid;
