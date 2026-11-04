@@ -13,7 +13,7 @@ function GuessRow({ guess, answer }) {
   return (
     <p className="guess">
       {cells.map(({ letter, status }, index) => (
-        <span className={`cell ${letter.trim() ? status : ""}`} key={index}>
+        <span className={`cell ${status && status}`} key={index}>
           {letter}
         </span>
       ))}
