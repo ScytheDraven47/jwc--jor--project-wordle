@@ -22,7 +22,7 @@ function Game() {
     console.log({ answer, guess });
     if (answer === guess) {
       setGameState("won");
-    } else if (guesses.length >= NUM_OF_GUESSES_ALLOWED) {
+    } else if (guesses.length >= NUM_OF_GUESSES_ALLOWED - 1) {
       setGameState("lost");
     }
   }
