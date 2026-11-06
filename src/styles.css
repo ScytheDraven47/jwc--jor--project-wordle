@@ -107,6 +107,21 @@ h1 {
   font-size: 2rem;
 }
 
+.button {
+  --_color: var(--color-warning);
+  --_text-color: var(--color-gray-900);
+  text-align: center;
+  /*line-height: 200%;*/
+  /*aspect-ratio: 1;*/
+  padding: 0.5rem 1rem;
+  margin-top: 0.5rem;
+
+  color: var(--_text-color);
+  background-color: var(--_color);
+  border-color: var(--_color);
+  border-radius: 4px;
+}
+
 /*
   Round the corners for the 4 cells at the very corners of
   the game board
