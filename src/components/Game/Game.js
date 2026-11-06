@@ -33,7 +33,6 @@ function Game() {
   }
 
   function getGameState(numGuesses, currentGuess) {
-    console.log({ numGuesses, NUM_OF_GUESSES_ALLOWED, currentGuess, answer });
     if (answer === currentGuess) {
       return "won";
     } else if (numGuesses >= NUM_OF_GUESSES_ALLOWED) {
@@ -62,12 +61,10 @@ function Game() {
   }
 
   function handleGuess(guess) {
-    console.log(guess);
     saveLetters(guess);
 
     const nextGuesses = [...guesses, guess];
     setGuesses(nextGuesses);
-    console.log(guess);
     setGameState(getGameState(nextGuesses.length, guess));
   }
 
