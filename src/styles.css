@@ -185,6 +185,50 @@ h1 {
   color: white;
 }
 
+.keyboard {
+  --_gap: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--_gap);
+
+  & > div {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    gap: var(--_gap);
+
+    & > span {
+      --_color: var(--color-gray-700);
+      --_text-color: var(--color-gray-100);
+      text-align: center;
+      line-height: 200%;
+      aspect-ratio: 1;
+      flex: 0 1 35px;
+      font-weight: bold;
+
+      color: var(--_text-color);
+      background-color: var(--_color);
+      border-color: var(--_color);
+      border-radius: 4px;
+
+      &.incorrect {
+        --_color: var(--color-gray-300);
+        --_text-color: var(--color-gray-900);
+      }
+      &.misplaced {
+        --_color: var(--color-warning);
+        --_text-color: var(--color-gray-900);
+      }
+      &.correct {
+        --_color: var(--color-success);
+        --_text-color: var(--color-gray-900);
+      }
+    }
+  }
+}
+
 .visually-hidden {
   position: absolute;
   overflow: hidden;

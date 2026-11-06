@@ -17,9 +17,12 @@ function GuessInput({ handleGuess, disabled }) {
     <form className="guess-input-wrapper" onSubmit={handleSubmit}>
       <label htmlFor="guess-input">Enter guess:</label>
       <input
+        autoFocus
         type="text"
         id="guess-input"
         value={guess}
+        minLength="5"
+        maxLength="5"
         onChange={handleChange}
         pattern="[a-zA-Z]{5}"
         disabled={disabled}
